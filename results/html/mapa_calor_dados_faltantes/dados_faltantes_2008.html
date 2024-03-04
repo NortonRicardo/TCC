@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4ef8c0598d1fd750f8bc750a7cd7f6df {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4ef8c0598d1fd750f8bc750a7cd7f6df" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4ef8c0598d1fd750f8bc750a7cd7f6df = L.map(
+                "map_4ef8c0598d1fd750f8bc750a7cd7f6df",
+                {
+                    center: [-16.329477298260873, -49.297002688695656],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_476b887dc00da4818c04956c0dd9fe7a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_476b887dc00da4818c04956c0dd9fe7a.addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            var heat_map_273c4835b9453fd94ec5fa8385df4713 = L.heatLayer(
+                [[-13.30944444, -49.11749999, 8784], [-15.90277777, -52.24527777, 8784], [-16.64277777, -49.22027777, 6594], [-17.45472222, -52.60111111, 3537], [-14.97972221, -49.53944444, 2402], [-18.40972222, -49.19194444, 2207], [-15.22027777, -48.98999999, 1625], [-18.969142, -50.633449, 1255], [-17.9236111, -51.71749999, 238], [-14.13305554, -47.52333332, 164], [-18.154779, -47.927614, 117], [-15.596491, -47.625801, 108], [-15.93972221, -50.14138888, 82], [-15.78944444, -47.92583332, 81], [-17.78527777, -50.965, 77], [-16.96694443, -51.81749999, 75], [-13.25361111, -46.89027777, 74], [-17.30416666, -48.28416666, 73], [-16.78499999, -47.61305555, 72], [-16.26055555, -47.96694443, 71], [-17.745066, -49.101698, 70], [-14.08916666, -46.36638888, 68], [-16.9625, -50.42555554, 31]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 20}
+            );
+        
+    
+            heat_map_273c4835b9453fd94ec5fa8385df4713.addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            var circle_marker_62af784ab279ca62b0efc97f426ba5fc = L.circleMarker(
+                [-13.30944444, -49.11749999],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_62af784ab279ca62b0efc97f426ba5fc.bindTooltip(
+                `<div>
+                     CDG: A005<br>Cidade: PORANGATU
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_908c556a75d9ba1673fe41a3008f471e = L.circleMarker(
+                [-15.90277777, -52.24527777],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_908c556a75d9ba1673fe41a3008f471e.bindTooltip(
+                `<div>
+                     CDG: A013<br>Cidade: ARAGARCAS
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_019c818043968ebf66c33f2feaf8e82d = L.circleMarker(
+                [-16.64277777, -49.22027777],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_019c818043968ebf66c33f2feaf8e82d.bindTooltip(
+                `<div>
+                     CDG: A002<br>Cidade: GOIANIA
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d77acc3735d56ae444d00843dad28d3b = L.circleMarker(
+                [-17.45472222, -52.60111111],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_d77acc3735d56ae444d00843dad28d3b.bindTooltip(
+                `<div>
+                     CDG: A026<br>Cidade: MINEIROS
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_64255c7fc981e76ce72a9d2b622b0d9d = L.circleMarker(
+                [-14.97972221, -49.53944444],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_64255c7fc981e76ce72a9d2b622b0d9d.bindTooltip(
+                `<div>
+                     CDG: A015<br>Cidade: ITAPACI
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_00a3517f01e7119aeaea0a5305be062c = L.circleMarker(
+                [-18.40972222, -49.19194444],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_00a3517f01e7119aeaea0a5305be062c.bindTooltip(
+                `<div>
+                     CDG: A035<br>Cidade: ITUMBIARA
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_68150a4f67a077d2b65a4135efde6b8a = L.circleMarker(
+                [-15.22027777, -48.98999999],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_68150a4f67a077d2b65a4135efde6b8a.bindTooltip(
+                `<div>
+                     CDG: A022<br>Cidade: GOIANESIA
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a200495e142ca898fdb310e0e0a6dcfc = L.circleMarker(
+                [-18.969142, -50.633449],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_a200495e142ca898fdb310e0e0a6dcfc.bindTooltip(
+                `<div>
+                     CDG: A011<br>Cidade: SAO SIMAO
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ab6e8e0e41a606f075c729503084d808 = L.circleMarker(
+                [-17.9236111, -51.71749999],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_ab6e8e0e41a606f075c729503084d808.bindTooltip(
+                `<div>
+                     CDG: A016<br>Cidade: JATAI
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6e931f09161dd8f1cb1bb32edac2ffb6 = L.circleMarker(
+                [-14.13305554, -47.52333332],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_6e931f09161dd8f1cb1bb32edac2ffb6.bindTooltip(
+                `<div>
+                     CDG: A024<br>Cidade: ALTO PARAISO DE GOIAS
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b61cc1ca7edb1e8b63690128ea70235e = L.circleMarker(
+                [-18.154779, -47.927614],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_b61cc1ca7edb1e8b63690128ea70235e.bindTooltip(
+                `<div>
+                     CDG: A034<br>Cidade: CATALAO
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7208681f8ab2f8049932099120c0f9f3 = L.circleMarker(
+                [-15.596491, -47.625801],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_7208681f8ab2f8049932099120c0f9f3.bindTooltip(
+                `<div>
+                     CDG: A045<br>Cidade: AGUAS EMENDADAS
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_becb8cc2877ccad9da105a460e45a25e = L.circleMarker(
+                [-15.93972221, -50.14138888],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_becb8cc2877ccad9da105a460e45a25e.bindTooltip(
+                `<div>
+                     CDG: A014<br>Cidade: GOIAS
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bbcf6a01a005efce032893894b90f25f = L.circleMarker(
+                [-15.78944444, -47.92583332],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_bbcf6a01a005efce032893894b90f25f.bindTooltip(
+                `<div>
+                     CDG: A001<br>Cidade: BRASILIA
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f8123bab86e6df64607db90a25595fdd = L.circleMarker(
+                [-17.78527777, -50.965],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_f8123bab86e6df64607db90a25595fdd.bindTooltip(
+                `<div>
+                     CDG: A025<br>Cidade: RIO VERDE
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ea4f518e677f780baa59e17059c16b14 = L.circleMarker(
+                [-16.96694443, -51.81749999],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_ea4f518e677f780baa59e17059c16b14.bindTooltip(
+                `<div>
+                     CDG: A023<br>Cidade: CAIAPONIA
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_32446faa8755e5ee53eb03f740edd794 = L.circleMarker(
+                [-13.25361111, -46.89027777],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_32446faa8755e5ee53eb03f740edd794.bindTooltip(
+                `<div>
+                     CDG: A032<br>Cidade: MONTE ALEGRE DE GOIAS
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c587c7e916dea64091998ccae8a52175 = L.circleMarker(
+                [-17.30416666, -48.28416666],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_c587c7e916dea64091998ccae8a52175.bindTooltip(
+                `<div>
+                     CDG: A033<br>Cidade: PIRES DO RIO
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2b61d61526e6b9e11f10cba4f55bfef3 = L.circleMarker(
+                [-16.78499999, -47.61305555],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_2b61d61526e6b9e11f10cba4f55bfef3.bindTooltip(
+                `<div>
+                     CDG: A036<br>Cidade: CRISTALINA
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1ec52dd0dbe3ba87202a866a16d62155 = L.circleMarker(
+                [-16.26055555, -47.96694443],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_1ec52dd0dbe3ba87202a866a16d62155.bindTooltip(
+                `<div>
+                     CDG: A012<br>Cidade: LUZIANIA
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0ebfb894a6eda1bbf5eaa29ab7d1f979 = L.circleMarker(
+                [-17.745066, -49.101698],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_0ebfb894a6eda1bbf5eaa29ab7d1f979.bindTooltip(
+                `<div>
+                     CDG: A003<br>Cidade: MORRINHOS
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b6fad14bc0aa54477ab4f8dccfdb95ed = L.circleMarker(
+                [-14.08916666, -46.36638888],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_b6fad14bc0aa54477ab4f8dccfdb95ed.bindTooltip(
+                `<div>
+                     CDG: A017<br>Cidade: POSSE
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_819d79c6fe5f411dad90c55b0cf05222 = L.circleMarker(
+                [-16.9625, -50.42555554],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1, "stroke": true, "weight": 3}
+            ).addTo(map_4ef8c0598d1fd750f8bc750a7cd7f6df);
+        
+    
+            circle_marker_819d79c6fe5f411dad90c55b0cf05222.bindTooltip(
+                `<div>
+                     CDG: A027<br>Cidade: PARAUNA
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
