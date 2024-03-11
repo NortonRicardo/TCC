@@ -10,6 +10,8 @@ pandas = "*"
 folium = "*"
 geopy = "*"
 seaborn = "*"
+scipy = "*"
+plotly = "*"
 
 [dev-packages]
 ipykernel = "*"
